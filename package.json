@@ -1,6 +1,6 @@
 {
   "name": "@happyhackin/exec",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "promisifed exec",
   "main": "src/index.js",
   "scripts": {
