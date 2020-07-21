@@ -1,9 +1,9 @@
 const {exec} = require('child_process');
 
 module.exports.exec = (cmd, options={}) => {
-  const child = exec(cmd, options)
+  return new Promise((resolve, reject) => {
+    const child = exec(cmd, options)
 
-  child.promise = () => new Promise((resolve, reject) => {
     let completed = false
     let logged = ""
     let stdout = ""
@@ -62,6 +62,4 @@ module.exports.exec = (cmd, options={}) => {
       succeed({exitType: 'close', code, signal})
     })
   })
-
-  return child 
 }

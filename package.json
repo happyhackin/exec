@@ -1,15 +1,26 @@
 {
   "name": "@happyhackin/exec",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "promisifed exec",
   "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": ["exec"],
+  "keywords": [
+    "exec"
+  ],
   "author": "Duncan Marsh <slugbyte@slugbyte.com>",
   "license": "MIT",
   "devDependencies": {
     "jest": "^26.1.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/happyhackin/exec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/happyhackin/exec/issues"
+  },
+  "homepage": "https://github.com/happyhackin/exec#readme"
 }
