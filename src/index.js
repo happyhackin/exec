@@ -10,6 +10,9 @@ module.exports.exec = (cmd, options={}) => {
     let stderr = ""
 
     const getDefaults = () => ({
+      error: null,
+      code: null,
+      signal: null,
       stdout: stdout.trim(),
       stderr: stderr.trim(),
       logged: logged.trim(),
