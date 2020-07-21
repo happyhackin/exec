@@ -19,7 +19,7 @@ module.exports.exec = (cmd, options={}) => {
     })
 
     const createResult = (data) => {
-      return Object.assign(child, data, getDefaults())
+      return Object.assign(child, getDefaults(), data)
     }
 
     const fail = (data) => {
@@ -61,7 +61,8 @@ module.exports.exec = (cmd, options={}) => {
     })
 
     child.on('close', (code, signal) => {
-      if(code != 0) fail({type: 'close', code, signal})
+      if(code != 0) 
+        return fail({exitType: 'close', code, signal})
       succeed({exitType: 'close', code, signal})
     })
   })

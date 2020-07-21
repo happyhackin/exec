@@ -1,4 +1,4 @@
-const {exec} = require('./index.js') 
+const {exec} = require('./exec.js') 
 describe('exec', () => {
   test('run ls', async () => {
     const result = await exec('ls /', {quiet: true})
