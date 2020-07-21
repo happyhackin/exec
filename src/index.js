@@ -4,6 +4,7 @@ module.exports.exec = (cmd, options={}) => {
   return new Promise((resolve, reject) => {
     const child = exec(cmd, options)
 
+
     let completed = false
     let logged = ""
     let stdout = ""
