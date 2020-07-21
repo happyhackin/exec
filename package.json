@@ -1,0 +1,15 @@
+{
+  "name": "@happyhackin/exec",
+  "version": "1.0.0",
+  "description": "promisifed exec",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": ["exec"],
+  "author": "Duncan Marsh <slugbyte@slugbyte.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}
