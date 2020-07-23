@@ -1,9 +1,5 @@
-const {exec} = require('child_process');
-
-module.exports.exec = (cmd, options={}) => {
+module.exports.handleChildProcess = (child, options) => {
   return new Promise((resolve, reject) => {
-    const child = exec(cmd, options)
-
     let completed = false
     let logged = ""
     let stdout = ""
