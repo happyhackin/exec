@@ -1,4 +1,4 @@
-module.exports.handleChildProcess = (child, options) => {
+export const handleChildProcess = (child, options) => {
   return new Promise((resolve, reject) => {
     let completed = false
     let logged = ""

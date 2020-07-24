@@ -1,17 +1,17 @@
-const {exec, spawn, execFile} = require('child_process');
-const {handleChildProcess} = require('./lib/handle-child-process.js')
+import * as childProcess from 'child_process'
+import {handleChildProcess} from './lib/handle-child-process.js'
 
-module.exports.exec = (cmd, options={}) => {
-  const child = exec(cmd, options)
+export const exec = (cmd, options={}) => {
+  const child = childProcess.exec(cmd, options)
   return handleChildProcess(child, options)
 }
 
-module.exports.spawn = (cmd, args, options) => {
-  const child = spawn(cmd, args, options)
+export const spawn = (cmd, args, options) => {
+  const child = childProcess.spawn(cmd, args, options)
   return handleChildProcess(child, options)
 }
 
-module.exports.execFile = (cmd, args, options) => {
-  const child = execFile(cmd, args, options)
+export const execFile = (cmd, args, options) => {
+  const child = childProcess.execFile(cmd, args, options)
   return handleChildProcess(child, options)
 }

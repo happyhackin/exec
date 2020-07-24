@@ -2,22 +2,47 @@
   "name": "@happyhackin/exec",
   "version": "0.8.0",
   "description": "promisifed exec, spawn, and execFile",
+  "author": "Duncan Marsh <slugbyte@slugbyte.com>",
+  "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/test.js"
+    "build": "webpack --mode production",
+    "test": "mocha src/test.js",
+    "release:manual": "release-it",
+    "release": "release-it --ci"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "release: v${version}"
+    },
+    "hooks": {
+      "before:init": [
+        "npm run build"
+      ]
+    }
+  },
+  "babel": {
+    "presets": [ [ "@babel/preset-env", { "targets": { "node": true } } ] ],
+    "plugins": []
   },
   "keywords": [
     "exec",
     "spawn",
     "execFile"
   ],
-  "author": "Duncan Marsh <slugbyte@slugbyte.com>",
-  "license": "MIT",
-  "devDependencies": {},
-  "dependencies": {
-    "better-assert": "^1.0.2",
-    "mocha": "^8.0.1"
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
+    "@babel/runtime": "^7.10.5",
+    "babel-loader": "^8.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "release-it": "^13.6.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/happyhackin/exec.git"

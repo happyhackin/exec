@@ -1,0 +1,6 @@
+ui: tdd
+exit: true
+reporter: tap
+require: 
+  - "@babel/register"
+  - "chai/register-assert"
