@@ -13,7 +13,8 @@
   },
   "release-it": {
     "git": {
-      "commitMessage": "release: v${version}"
+      "commitMessage": "release: v${version}",
+      "requireUpstream": false
     },
     "hooks": {
       "before:init": [
