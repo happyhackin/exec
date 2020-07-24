@@ -5,6 +5,8 @@
 * Run `npm i -S @happyhackin/exec`
 
 # Usage
+
+<!--TODO: write about options and quite -->
 ``` javascript
 const {exec} require('@happyhackin/exec')
 

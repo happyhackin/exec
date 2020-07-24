@@ -1,6 +1,7 @@
 import {exec, spawn, execFile} from './index.js';
 
 test('run ls with exec', async () => {
+  // TODO: defaulte quiet to true
   const result = await exec('ls /', {quiet: true})
   assert(result.code === 0)
   assert(result.stdout.indexOf('bin') !== -1)
