@@ -17,6 +17,30 @@ exec('ls /')
 })
 ```
 
+``` javascript
+const {spawn} require('@happyhackin/exec')
+
+spawn('ls' ['/'])
+.then((success) => {
+  // ... handle success
+})
+.catch((error) => {
+  // ... handle error
+})
+```
+
+``` javascript
+const {execFile} require('@happyhackin/exec')
+
+execFile('/bin/ls' ['/'])
+.then((success) => {
+  // ... handle success
+})
+.catch((error) => {
+  // ... handle error
+})
+```
+
 ## Handling the result
 * resolved and rejected result data have same formatting
 ```
