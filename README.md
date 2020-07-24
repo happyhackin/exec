@@ -42,10 +42,11 @@ execFile('/bin/ls' ['/'])
 ```
 
 ## Handling the result
+* resolves or rejects a [ChildProcess](https://nodejs.org/api/child_process.html#child_process_class_childprocess) along with the following annotations
 * resolved and rejected result data have same formatting
 ```
 {
-  ...subprocess,
+  ...ChildProcess,
   exitType: <string> -- close | dissconnect | error
   code: <number> |null
   signal: <string> | null
