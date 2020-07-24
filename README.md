@@ -1,5 +1,5 @@
 # @happyhackin/exec
-> promisifed exec
+> Promisified exec, spawn, and execFile
 
 # Installation
 * Run `npm i -S @happyhackin/exec`
