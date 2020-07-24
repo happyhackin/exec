@@ -1,6 +1,6 @@
 {
   "name": "@happyhackin/exec",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "promisifed exec, spawn, and execFile",
   "author": "Duncan Marsh <slugbyte@slugbyte.com>",
   "license": "MIT",
@@ -23,7 +23,16 @@
     }
   },
   "babel": {
-    "presets": [ [ "@babel/preset-env", { "targets": { "node": true } } ] ],
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ],
     "plugins": []
   },
   "keywords": [
